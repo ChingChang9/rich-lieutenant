@@ -21,12 +21,10 @@ rpc.on("ready", async () => {
 
   const script = require(`./src/${ app }.js`);
   await script.setPresence(rpc);
-  updateConsole(`Updated the RPC ${ ++config.updatecounter } time${ config.updatecounter === 1 ? "" : "s" }!`);
-  if (app === "homework") {
-    updateConsole("RPC has been set!");
-  } else {
+  updateConsole("RPC has been set!");
+  if (app !== "homework") {
     setInterval(async () => {
-      await script.setPresence();
+      await script.setPresence(rpc);
       updateConsole(`Updated the RPC ${ ++config.updatecounter } time${ config.updatecounter === 1 ? "" : "s" }!`);
     }, 20 * 1000);
   }
