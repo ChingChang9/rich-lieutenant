@@ -1,6 +1,6 @@
 {
   "name": "rich-lieutenant",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Customized rich presence for Discord",
   "main": "index.js",
   "author": "Ching Chang",
