@@ -3,8 +3,30 @@
   "version": "1.0.0",
   "description": "Customized rich presence for Discord",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChingChang9/rich-lieutenant.git"
+  },
+  "keywords": [
+    "discord",
+    "rich presence",
+    "itunes",
+    "youtube"
+  ],
   "author": "Ching Chang",
+  "contributors": [
+    {
+      "name": "Ching Chang",
+      "email": "chingtheprogrammer@gmail.com",
+      "url": "https://chingchang.dev"
+    }
+  ],
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChingChang9/rich-lieutenant/issues",
+    "email": "chingtheprogrammer@gmail.com"
+  },
+  "homepage": "https://github.com/ChingChang9/rich-lieutenant#readme",
   "dependencies": {
     "applescript": "^1.0.0",
     "discord-rpc": "^3.0.0-beta.4",
