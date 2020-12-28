@@ -1,5 +1,5 @@
-const DiscordRPC = require("discord-rpc");
-const rpc = new DiscordRPC.Client({ transport: "ipc" });
+const { Client } = require("discord-rpc");
+const rpc = new Client({ transport: "ipc" });
 const app = process.argv[2];
 
 const banner = `______ _                       _           ____________  _____
@@ -19,13 +19,13 @@ rpc.on("ready", async () => {
 	console.log(banner);
 	process.stdout.write("Setting RPC activity...");
 
-  const script = require(`./src/${ app }.js`);
-  await script.setPresence(rpc);
+  const { setPresence } = require(`./src/${ app }.js`);
+  await setPresence(rpc);
   updateConsole("RPC has been set!");
   if (app !== "homework") {
     let updatecounter = 0;
     setInterval(async () => {
-      await script.setPresence(rpc);
+      await setPresence(rpc);
       updateConsole(`Updated the RPC ${ ++updatecounter } time${ updatecounter === 1 ? "" : "s" }!`);
     }, 20 * 1000);
   }
